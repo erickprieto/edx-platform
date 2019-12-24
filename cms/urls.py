@@ -80,7 +80,7 @@ urlpatterns = [
 
     # For redirecting to help pages.
     url(r'^help_token/', include('help_tokens.urls')),
-    url(r'^api/', include('cms.djangoapps.api.urls', namespace='api')),
+    url(r'^api/', include('cms.djangoapps.api.urls', 'api')),
 
     # restful api
     url(r'^$', contentstore.views.howitworks, name='homepage'),
@@ -217,7 +217,7 @@ if settings.FEATURES.get('ENABLE_SERVICE_STATUS'):
 # changes go through our user portal and follow complexity requirements.
 urlpatterns.append(url(r'^admin/password_change/$', handler404))
 urlpatterns.append(url(r'^admin/auth/user/\d+/password/$', handler404))
-urlpatterns.append(url(r'^admin/', include(admin.site.urls)))
+urlpatterns.append(url(r'^admin/', admin.site.urls))
 
 # enable entrance exams
 if settings.FEATURES.get('ENTRANCE_EXAMS'):
