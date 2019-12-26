@@ -8,7 +8,6 @@ from rest_framework.routers import DefaultRouter
 
 from .views.course_runs import CourseRunViewSet
 
-
 app_name='cms.djangoapps.api.v1'
 
 router = DefaultRouter()
