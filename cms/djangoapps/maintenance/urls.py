@@ -14,7 +14,7 @@ from .views import (
     MaintenanceIndexView
 )
 
-app_name = 'maintenance'
+app_name = 'cms.djangoapps.maintenance'
 
 urlpatterns = [
     url(r'^$', MaintenanceIndexView.as_view(), name='maintenance_index'),
