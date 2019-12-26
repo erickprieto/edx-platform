@@ -80,7 +80,7 @@ urlpatterns = [
 
     # For redirecting to help pages.
     url(r'^help_token/', include('help_tokens.urls')),
-    url(r'^api/', include('cms.djangoapps.api.urls', 'api')),
+    url(r'^api/', include('cms.djangoapps.api.urls', namespace='api')),
 
     # restful api
     url(r'^$', contentstore.views.howitworks, name='homepage'),
